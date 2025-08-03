@@ -1,0 +1,258 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --surface-color: #ffffff;
+    --text-color: #212529;
+    --border-color: #dee2e6;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--surface-color);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+}
+
+.sidebar {
+    flex: 0 0 300px;
+}
+
+.content {
+    flex: 1;
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.course-list ul, .module-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-list-item, .module-list-item, .submodule-list-item {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    margin-bottom: -1px;
+    cursor: pointer;
+    background-color: var(--surface-color);
+    transition: background-color 0.2s;
+}
+
+.course-list-item:first-child, .module-list-item:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.course-list-item:last-child, .module-list-item:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 0;
+}
+
+.course-list-item:hover, .module-list-item:hover, .submodule-list-item:hover {
+    background-color: #e9ecef;
+}
+
+.course-list-item.active, .module-list-item.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.submodule-list-item.active {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.module-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.module-content ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.submodule-list-item {
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Admin Panel Styles */
+.admin-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.admin-sidebar {
+    flex: 0 0 350px;
+}
+.admin-main {
+    flex: 1;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+.card h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+}
+.card h3 {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+button:hover {
+    opacity: 0.85;
+}
+
+.btn {
+    color: white;
+    background-color: var(--primary-color);
+}
+.btn-success {
+    color: white;
+    background-color: var(--success-color);
+}
+.btn-danger {
+    color: white;
+    background-color: var(--danger-color);
+}
+.btn-secondary {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.admin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+.admin-item-title {
+    cursor: pointer;
+}
+.admin-item-title:hover {
+    color: var(--primary-color);
+}
+
+.admin-item .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+.admin-item .actions button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.placeholder {
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 3rem;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+}
+
